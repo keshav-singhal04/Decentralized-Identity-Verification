@@ -1,0 +1,331 @@
+/* Base styles and resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background: #f5f7fa;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+/* Typography */
+h1 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+h2 {
+  color: #3498db;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
+h3 {
+  color: #2c3e50;
+  margin-bottom: 0.75rem;
+  font-size: 1.3rem;
+}
+
+p {
+  margin-bottom: 1.2rem;
+  color: #555;
+}
+
+/* Cards */
+.card {
+  background: #fff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+}
+
+/* Form elements */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #2c3e50;
+  font-weight: 500;
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 2px solid #e0e6ed;
+  border-radius: 6px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  background-color: #fff;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.form-control:disabled {
+  background-color: #f5f7fa;
+  cursor: not-allowed;
+}
+
+select.form-control {
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 1rem center;
+  background-size: 1rem;
+  padding-right: 2.5rem;
+}
+
+/* Buttons */
+.btn {
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-block;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+  transform: translateY(-1px);
+}
+
+.btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  background-color: #a0b2c3;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+button[type="button"].btn {
+  background-color: #7f8c8d;
+}
+
+button[type="button"].btn:hover {
+  background-color: #6c7a7d;
+}
+
+/* Tabs navigation */
+.tabs {
+  display: flex;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.tab {
+  flex-grow: 1;
+  text-align: center;
+  padding: 1rem;
+  background-color: #fff;
+  color: #7f8c8d;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+  border-bottom: 3px solid transparent;
+}
+
+.tab:hover {
+  background-color: #f8f9fa;
+  color: #3498db;
+}
+
+.tab.active {
+  background-color: #fff;
+  color: #3498db;
+  border-bottom: 3px solid #3498db;
+}
+
+/* Status indicators */
+.status-indicator {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.status-verified {
+  background-color: #2ecc71;
+  box-shadow: 0 0 5px rgba(46, 204, 113, 0.5);
+}
+
+.status-registered {
+  background-color: #f39c12;
+  box-shadow: 0 0 5px rgba(243, 156, 18, 0.5);
+}
+
+.status-unregistered {
+  background-color: #e74c3c;
+  box-shadow: 0 0 5px rgba(231, 76, 60, 0.5);
+}
+
+/* Message styling */
+.error, .success {
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+.error {
+  background-color: rgba(231, 76, 60, 0.1);
+  color: #c0392b;
+  border-left: 4px solid #e74c3c;
+}
+
+.success {
+  background-color: rgba(46, 204, 113, 0.1);
+  color: #27ae60;
+  border-left: 4px solid #2ecc71;
+}
+
+/* Lists in admin panel */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  background-color: #f8f9fa;
+  padding: 0.8rem 1rem;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: monospace;
+  font-size: 0.9rem;
+  word-break: break-all;
+}
+
+/* Account info display */
+.card p:first-of-type {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 0.5rem;
+  border-radius: 4px;
+  word-break: break-all;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab {
+    border-bottom: none;
+    border-left: 3px solid transparent;
+  }
+  
+  .tab.active {
+    border-bottom: none;
+    border-left: 3px solid #3498db;
+  }
+  
+  .card {
+    padding: 1.5rem;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.card, .btn, form {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* Blockchain specific visual elements */
+.hash-display {
+  font-family: monospace;
+  background-color: #f8f9fa;
+  padding: 0.8rem;
+  border-radius: 6px;
+  overflow-wrap: break-word;
+  border: 1px solid #e0e6ed;
+}
+
+/* Web3 connection status */
+.connection-status {
+  display: inline-block;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-left: 1rem;
+}
+
+.connected {
+  background-color: rgba(46, 204, 113, 0.2);
+  color: #27ae60;
+}
+
+.disconnected {
+  background-color: rgba(231, 76, 60, 0.2);
+  color: #c0392b;
+}
+.refresh-btn{
+  background-color: #a9db34;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 2rem;
+  cursor: pointer;
+  transition: background-color 0.2s, transform 0.1s;
+  display: inline-block;
+  text-align: center;
+}
