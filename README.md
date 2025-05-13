@@ -64,7 +64,7 @@ git clone "https://github.com/keshav-singhal04/Decentralized-Identity-Verificati
 cd project
 ```
 
-2. Install dependencies:
+2. Install dependencies by executing the following command inside the `project` root directory and inside the `client` and `backend` directories:
 ```
 npm install
 ```
